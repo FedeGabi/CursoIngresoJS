@@ -2,7 +2,13 @@ function mostrar()
 {
 	//tomo el mes
 	var mesDelAño =txtIdMes.value;
-	alert(mesDelAño);
+	
+	if ( mesDelAño == "Enero" ){
+
+		alert("¡¡¡Que comiences bien el año!!!");
+	}
+	
+
 
 
 
