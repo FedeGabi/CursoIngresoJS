@@ -12,6 +12,13 @@ function mostrar()
 		if ((edad < 18) && (estadoCivil !== "Soltero")){
 
 			alert("muy chico para NO ser SOLTERO ")
+
+
+			
+
+
+
+			
 		}
 		
 

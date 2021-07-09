@@ -17,21 +17,36 @@ function mostrarAumento()
 */
 
 
-let importe;
-let aumento;
-let resultado;
+	let sueldo;
+	let porcentaje;
+	let resultado;
 
-importe = txtIdImporte.value;
-resultado = txtIdResultado.value; 
 
-importe = parseFloat(importe);
-resultado = parseFloat(resultado);
+	sueldo = parseFloat(document.getElementById("txtIdImporte").value);
+	porcentaje = parseFloat(prompt("Ingrese porcentaje"));	
 
-aumento = importe * 0.25;
+	resultado = (sueldo * porcentaje / 100) + sueldo;
 
-resultado = importe + aumento;
+	document.getElementById("txtIdResultado").value = resultado;
 
-txtIdResultado.value = resultado;
+
+		
+
+		
+
+
+
+		//importe = txtIdImporte.value;
+		//resultado = txtIdResultado.value; 
+
+		//importe = parseFloat(importe);
+		//resultado = parseFloat(resultado);
+
+		//aumento = importe * 0.25;
+
+		//resultado = importe + aumento;
+
+		//txtIdResultado.value = resultado;
 
 }
 
