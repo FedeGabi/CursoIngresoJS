@@ -9,42 +9,69 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
 
  */
 function CalcularPrecio () 
-
 {   
- 	let cantidadLamparas;
-    let precioCantidad;
+    const PRECIO_UNIDAD = 35;
+    let cantidad;
     let marca;
-    let des50;
-    let des40
-    let des30
-    let des25
-    let des15
-    let des10
+    let descuento;
+    let importeFinal;
+    let iibb;
+    let precioConDescuento;
 
+    cantidad = document.getElementById("txtIdCantidad").value;
+    cantidad = parseFloat(cantidad);
     marca = document.getElementById("Marca").value;
-    cantidadLamparas = document.getElementById("txtIdCantidad").value;
-    cantidadLamparas=parseFloat(cantidadLamparas)
+
+    switch(cantidad){
+        case 1:
+        case 2:
+            descuento = 0;
+            break;
+        case 3:
+            if(marca == "ArgentinaLuz"){
+                descuento=15;
+            }
+            else if (marca == "FelipeLamparas"){
+                descuento=10;
+            }
+            else {
+                descuento=5;
+            }
+            break;
+        case 4:
+            if(marca == "ArgentinaLuz" || marca == "FelipeLamparas"){
+                descuento=25;
+            }
+            else {
+                descuento=20;
+            }
+            break;
+        case 5:
+            if(marca == "ArgentinaLuz"){
+                descuento=40;
+            }
+            else {
+                descuento=30;
+            }
+            break;
+    default: 
+        descuento=50;
+    }       
+    precioConDescuento= PRECIO_UNIDAD - PRECIO_UNIDAD * descuento/100;
+    importeFinal=precioConDescuento * cantidad;
+    iibb= importeFinal * 0.1;
+
+    if(importeFinal > 120){
     
-    precioCantidad=cantidadLamparas * 35;
-
-    des50=precioCantidad *0.5;
-    des40=precioCantidad *0.4;
-    des30=precioCantidad *0.3;
-    des25=precioCantidad *0.25;
-    des15=precioCantidad *0.15;
-    des10=precioCantidad *0.10;
-    
-    if (cantidadLamparas >=6){
-
-        document.getElementById("txtIdprecioDescuento").value= precioCantidad-des50;
+    document.getElementById("txtIdprecioDescuento").value=importeFinal+iibb;
+    alert("Usted pagó "+importeFinal+" de IIBB, siendo "+iibb+" el impuesto que se pagó")
     }
-    else if (marca=="ArgentinaLuz"&& cantidadLamparas==5 ){
+    else{
 
-        document.getElementById("txtIdprecioDescuento").value= precioCantidad-des40;
+        document.getElementById("txtIdprecioDescuento").value=importeFinal;
     }
-    else if (marca != "ArgentinaLuz" && cantidadLamparas==5){
 
-        document.getElementById("txtIdprecioDescuento").value= precioCantidad-des30;
-    }
+
+
 
 }
