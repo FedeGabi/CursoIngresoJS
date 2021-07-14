@@ -9,7 +9,7 @@ function mostrar()
 	maximo = 10
 	
 	numero = Math.random() * (maximo - minimo) + 1;
-	roundteado = Math.round(numero)
+	roundteado = Math.round(numero);
 
 	alert(roundteado);
 
