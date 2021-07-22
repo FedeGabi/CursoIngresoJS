@@ -11,7 +11,7 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
                 //SOLO IF ELSE.
 
  */function CalcularPrecio () 
-{   /*const UNIDAD = 35;
+{   const UNIDAD = 35;
     let cantidadLamparas;
     let marca;
     let descuento;
@@ -25,36 +25,39 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
     if(cantidadLamparas>5){
         descuento=50;
     }
-
-    if(cantidadLamparas==5){
-        if(cantidadLamparas==5 && marca == "ArgentinaLuz"){
-        descuento=40;        
-        }
-        else{
-            descuento=30;
-        }
-    }
-    if(cantidadLamparas==4){
-        if(marca == "ArgentinaLuz" || marca == "FelipeLamparas"){
-            descuento=25;
-        }
-        else{
-            descuento=20;
-        }
-    }
-    if(cantidadLamparas==3){
-        if(marca =="ArgentinaLuz"){
-             descuento=15;
-        }
-        else{
-            if (marca == "FelipeLamparas"){
-                descuento=10;
+    else
+    {
+        if(cantidadLamparas==5){
+            if(cantidadLamparas==5 && marca == "ArgentinaLuz"){
+            descuento=40;        
             }
             else{
-                descuento=5;
+                descuento=30;
             }
         }
-    } 
+        if(cantidadLamparas==4){
+            if(marca == "ArgentinaLuz" || marca == "FelipeLamparas"){
+                descuento=25;
+            }
+            else{
+                descuento=20;
+            }
+        }
+        if(cantidadLamparas==3){
+            if(marca =="ArgentinaLuz"){
+                 descuento=15;
+            }
+            else{
+                if (marca == "FelipeLamparas"){
+                    descuento=10;
+                }
+                else{
+                    descuento=5;
+                }
+            }
+        } 
+    }
+   
     if (cantidadLamparas<3){
         descuento=0;
     }   
@@ -69,7 +72,7 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
     else{
         document.getElementById("txtIdprecioDescuento").value = precioFinal;
     }
-}*/
+}
 
 
 
@@ -142,7 +145,7 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
                  SOLO CON SWITCH.
 */
  
-    const PRECIO_UNIDAD = 35;
+    /*const PRECIO_UNIDAD = 35;
     let cantidad;
     let marca;
     let descuento;
@@ -206,7 +209,7 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
         else{
     
             document.getElementById("txtIdprecioDescuento").value=importeFinal;
-        }
+        }*/
         
 
-}
+//}
